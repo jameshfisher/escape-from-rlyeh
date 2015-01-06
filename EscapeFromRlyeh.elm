@@ -40,7 +40,11 @@ lookupBi needle l = case lookup needle l of
 
 -- Number of 90-degree turns clockwise from north/front.
 -- These are equal modulo 4.
--- Think of as north/east/south/west.
+-- Think of as north/east/south/west:
+--   north/top/front   = 0 = 4 = ...
+--   east/right        = 1 = 5 = ...
+--   south/down/bottom = 2 = 6 = ...
+--   west/left         = 3 = 7 = ...
 type alias Direction = Int
 
 -- "normalize direction"
@@ -156,6 +160,13 @@ l1 =
  , dir = 0
  }
 
+--    .....
+--    :   :
+--   +-+  :
+--   |1|  :
+--   +-+  :
+--    :   :
+--    :...:
 l2 : State
 l2 =
  { graph = { vertices = [1]
@@ -165,6 +176,13 @@ l2 =
  , dir = 0
  }
 
+-- ╔════════╗
+-- ║        ║
+-- ║ +-+-+ +-+
+-- ╚═|1|2| |6|
+--   +-+-+-+-+
+--     |3|4|5|
+--     +-+-+-+
 l3 : State
 l3 =
  { graph = { vertices = [1,2,3,4,5,6]
