@@ -1,0 +1,13 @@
+{
+    "version": "0.0.1",
+    "summary": "",
+    "repository": "https://github.com/jameshfisher/escape-from-rlyeh.git",
+    "license": "GPL3",
+    "source-directories": [
+        "."
+    ],
+    "exposed-modules": [],
+    "dependencies": {
+        "elm-lang/core": "1.0.0 <= v < 2.0.0"
+    }
+}
